@@ -1,0 +1,10 @@
+if test ${1} = ""
+then 
+	echo 'you need to supply a search term (if term contains spaces ... please enclose it in quotes)'
+else
+while test "${1}" != ""
+do
+	grep -i "${1}" FFC_step5_reshape_withlabels.csv | sort | uniq
+	shift
+done
+fi

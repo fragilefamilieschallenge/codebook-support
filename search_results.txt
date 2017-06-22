@@ -1,0 +1,658 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /home/opr/dkoffman/FF/CHALLENGE/search_results.txt
+  log type:  text
+ opened on:  21 Jun 2017, 21:24:09
+
+. foreach v of varlist v* {
+  2. if "`v'" != "varname" {
+  3.         list  varname `v' searchstring if regexm(searchstring, `v') == 1, noobs string(100)
+  4. }
+  5. }
+
+  +----------------------------------------------------------------------------------------------------------------------------+
+  |  varname       v1   searchstring                                                                                           |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  |   m2c33b   prison   Is jail/prison a local, state, or federal facility? 1 Local 2 State 3 Federal -1 Refuse -2 Don't kno.. |
+  |  m2c33d2   prison   When did father go to jail/prison?-Year  -1 Refuse -10 wdnt take job -11 >12 hours -12 Still breastf.. |
+  |  m2c33e2   prison   When will father be released from prison?-Year  -1 Refuse -10 wdnt take job -11 >12 hours -12 Still .. |
+  |    m2c36   prison   Has father ever spent any time in jail/prison? 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don'.. |
+  |    m2e10   prison   Has current partner spent any time in jail or prison? 1 Yes 2 No -1 Refuse -10 None -14 mother died .. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  |  f2fh26b   prison   When were you most recently released from incarceration?-Year 1985 and earlier -1 -1 Refuse -12 Stil.. |
+  | m3c21d_7   prison   What action taken: sent father to prison or jail? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 M.. |
+  | m3c38d_7   prison   What action taken: sent father to prison or jail? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 M.. |
+  |    m3c42   prison   Has father ever spent any time in jail or prison? 1 Yes 2 No 3 In jail -1 Refuse -2 Don't know -3 Mi.. |
+  |  m3c42d2   prison   When did father go to jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not a.. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  |  m3c42e2   prison   When will father be released from jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |     m3e7   prison   What was CP doing most of last week? 0 Nothing 1 Working at regular job 2 Looking for work 3 In scho.. |
+  |    m3e25   prison   Has CP spent any time in jail or prison? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple a.. |
+  |     m3k7   prison   Why aren't you looking for a regular job? 1 Own business 101 Transportation 102 Back to school 103 P.. |
+  | f3c21d_7   prison   What action taken: sent to prison? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 .. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  | f3c38c_7   prison   What action taken: sent to prison? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 .. |
+  |  f3c42d2   prison   When did mother go to jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not a.. |
+  |  f3c42e2   prison   When will mother be released from jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |     f3k7   prison   Why aren't you looking for a regular job? 1 Own business 10 Other 101 Transportation 102 Back to sch.. |
+  |  m4c37c1   prison   How long did he spend in jail/prison? years  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 N.. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  |  m4c37c2   prison   How long did he spend in jail/prison? months  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 .. |
+  |  m4c37c3   prison   How long did he spend in jail/prison? weeks  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 N.. |
+  |  m4c37c4   prison   How long did he spend in jail/prison? days  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 No.. |
+  |  m4c37d2   prison   When did father go to jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not a.. |
+  |  m4c37e2   prison   When will father be released from jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  |     m4e7   prison   What current partner doing last week-working reg job, school, or sthg else? 0 Nothing 1 Working 101 .. |
+  |    m4e25   prison   Has current partner spent any time in jail or prison? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing .. |
+  |    m5b29   prison   B29 What father was doing most of last week 0 nothing 1 working at a regular job 101 working at part.. |
+  |   m5b30c   prison   B30C How long did he spend in jail/prison?  -1 Refuse -10 Not applicable -2 Don't know -3 Missing -4.. |
+  |  m5b30c1   prison   B30C1 Unit: Time father spent in jail/prison 1 year(s) 2 month(s) 3 week(s) 4 day(s) -1 Refuse -10 N.. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  |  m5b30d1   prison   B30D1 Month father went to jail/prison 1 Jan 10 Oct 11 Nov 12 Dec 2 Feb 3 Mar 4 Apr 5 May 6 Jun 7 Ju.. |
+  |  m5b30d2   prison   B30D2 Year father went to jail/prison  -1 Refuse -10 Not applicable -2 Don't know -3 Missing -4 Mult.. |
+  |  m5b30e1   prison   B30E1 Month father will be released from jail/prison 1 Jan 10 Oct 11 Nov 12 Dec 2 Feb 3 Mar 4 Apr 5 .. |
+  |  m5b30e2   prison   B30E2 Year father will be released from jail/prison  -1 Refuse -10 Not applicable -2 Don't know -3 M.. |
+  |    m5d23   prison   D23 Current partner has spent time in jail/prison 1 yes 2 no -1 Refuse -10 Not applicable -2 Don't k.. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  |     m5f2   prison   F2 Your current housing situation 1 Rent your own apartment or house 10 On the street homeless 2 Liv.. |
+  |  m5f28j1   prison   F28J3 Year you were released the most recent time from incarceration 1  gave date 98 still in prison.. |
+  | m5b17d_7   prison   B17D_7 Sent father to prison or jail 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missin.. |
+  |   f5b28x   prison   B28X Length of time she spent in jail/prison  -1 Refuse -10 Not applicable -2 Don't know -3 Missing .. |
+  |  f5b28x1   prison   B28X1 Unit: Length of time she spent in jail/prison 1 year(s) 2 month(s) 3 week(s) 4 day(s) -1 Refus.. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  |  f5b29x1   prison   B29X1 Month mother went to jail/prison 1 Jan 10 Oct 11 Nov 12 Dec 2 Feb 3 Mar 4 Apr 5 May 6 Jun 7 Ju.. |
+  |  f5b29x2   prison   B29X2 Year mother went to jail/prison  -1 Refuse -10 Not applicable -2 Don't know -3 Missing -4 Mult.. |
+  |  f5b30x1   prison   B30X1 Month mother will be released from jail/prison 1 Jan 10 Oct 11 Nov 12 Dec 2 Feb 3 Mar 4 Apr 5 .. |
+  |  f5b30x2   prison   B30X2 Year mother will be released from jail/prison  -1 Refuse -10 Not applicable -2 Don't know -3 M.. |
+  |     f5d7   prison   D7 What current partner was doing most of last week 0 nothing 1 working at a regular job 2 looking f.. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  |    f5d23   prison   D23 Current partner spent any time in jail or prison 1 yes 2 no -1 Refuse -10 Not applicable -2 Don'.. |
+  |     f5f2   prison   F2 Your current housing situation 1 Rent your own apartment or house 10 On the street homeless 2 Liv.. |
+  |  f5f28j1   prison   F28J1 Date last released from incarceration 1  gave date 98 still in prison -1 Refuse -10 Not applic.. |
+  | f5b17d_7   prison   B17D_7 Sent father to prison or jail 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missin.. |
+  +----------------------------------------------------------------------------------------------------------------------------+
+
+  +-----------------------------------------------------------------------------------------------------------------------------+
+  |     varname     v2   searchstring                                                                                           |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  cm1finjail   jail   Constructed - mother report, father in jail at her baseline interview                                  |
+  | cmf1finjail   jail   Constructed - mother and father reports, father in jail at either baseline inter                       |
+  |  cf1finjail   jail   Constructed - father report, father in jail at his baseline interview                                  |
+  |       m2b16   jail   Reason for most recent separation from child? 1 Illness 101 Out-of-town 102 Drug/alc rehab 103 Finan.. |
+  |       m2c33   jail   Is father currently working/in school/unemployed/in jail? 1 Working 2 Unemplyd 201 Working 202 Unemp.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |      m2c33b   jail   Is jail/prison a local, state, or federal facility? 1 Local 2 State 3 Federal -1 Refuse -2 Don't kno.. |
+  |     m2c33d2   jail   When did father go to jail/prison?-Year  -1 Refuse -10 wdnt take job -11 >12 hours -12 Still breastf.. |
+  |       m2c36   jail   Has father ever spent any time in jail/prison? 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don'.. |
+  |     m2c36a1   jail   What was father in jail for?-Assault 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't know -3 .. |
+  |     m2c36a2   jail   What was father in jail for?-Robbery 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't know -3 .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |     m2c36a3   jail   What was father in jail for?-Theft 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't know -3 Mi.. |
+  |     m2c36a4   jail   What was father in jail for?-Theft by deception 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don.. |
+  |     m2c36a5   jail   What was father in jail for?-Crime related to stolen property 1 Yes 2 No -1 Refuse -10 None -14 moth.. |
+  |     m2c36a6   jail   What was father in jail for?-Destruction of property 1 Yes 2 No -1 Refuse -10 None -14 mother died -.. |
+  |     m2c36a7   jail   What was father in jail for?-Other property offense 1 Yes 2 No -1 Refuse -10 None -14 mother died -2.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |     m2c36a8   jail   What was father in jail for?-Gambling 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't know -3.. |
+  |     m2c36a9   jail   What was father in jail for?-Commercial vice 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't .. |
+  |    m2c36a10   jail   What was father in jail for?-Possession/use marijuanna/hashish 1 Yes 2 No -1 Refuse -10 None -14 mot.. |
+  |    m2c36a11   jail   What was father in jail for?-Sale marijuanna/hashish 1 Yes 2 No -1 Refuse -10 None -14 mother died -.. |
+  |    m2c36a12   jail   What was father in jail for?-Possession of other illicit drugs 1 Yes 2 No -1 Refuse -10 None -14 mot.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |    m2c36a13   jail   What was father in jail for?-Sale/manufacture other illicit drugs 1 Yes 2 No -1 Refuse -10 None -14 .. |
+  |    m2c36a14   jail   What was father in jail for?-Major traffic offense 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 .. |
+  |    m2c36a15   jail   What was father in jail for?-Underage drinking? 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don.. |
+  |    m2c36a16   jail   What was father in jail for?-Status offense 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't k.. |
+  |    m2c36a17   jail   What was father in jail for?-Non-payment of child support 1 Yes 2 No -1 Refuse -10 None -14 mother d.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |    m2c36a18   jail   What was father in jail for?-Parole or probation violation 1 Yes 2 No -1 Refuse -10 None -14 mother .. |
+  |    m2c36a19   jail   What was father in jail for?-Other 1 Yes 101 Possession of weapon 102 Minor infractions 103 Arrest-r.. |
+  |     m2c37a1   jail   How long did he spend in jail?-Yrs  -1 Refuse -10 n/a - currently in jail -2 Don't know -3 Missing -.. |
+  |     m2c37a2   jail   How long did he spend in jail?-Months  -1 Refuse -10 wdnt take job -11 >12 hours -12 Still breastfee.. |
+  |     m2c37a3   jail   How long did he spend in jail?-Weeks  -1 Refuse -10 wdnt take job -11 >12 hours -12 Still breastfeed.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |     m2c37a4   jail   How long did he spend in jail?-Days                                                                    |
+  |  cm2finjail   jail   Constructed - mother report, father in jail at her 1 yr interview                                      |
+  |  cm2fevjail   jail   Constructed - mother reports, dad ever in jail by her 1yr interview                                    |
+  |      m2e2a1   jail   Partner is-M/F? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don't know -3 Missi.. |
+  |       m2e10   jail   Has current partner spent any time in jail or prison? 1 Yes 2 No -1 Refuse -10 None -14 mother died .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |        m2f1   jail   Not counting yourself, how many people currently live with you?  -1 Refuse -10 N/A (jail/shelter/str.. |
+  |      m2f2b1   jail   Is first person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don.. |
+  |      m2f2b2   jail   Is second person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Do.. |
+  |      m2f2b3   jail   Is third person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don.. |
+  |      m2f2b4   jail   Is fourth person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Do.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |      m2f2b5   jail   Is fifth person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don.. |
+  |      m2f2b6   jail   Is sixth person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don.. |
+  |      m2f2b7   jail   Is seventh person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 D.. |
+  |      m2f2b8   jail   Is eighth person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Do.. |
+  |      m2f2b9   jail   Is ninth person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |     m2f2b10   jail   Is tenth person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don.. |
+  |        m2h2   jail   What is current living situation? 1 Rent 10 Homeless 101 Mobile home 102 Military base/dorm 103 Mote.. |
+  |       f2b15   jail   Reason for most recent separation from child? 1 Illness 101 Out of town 102 Drug/alc rehab 103 Unemp.. |
+  |        f2f1   jail   Not counting yourself, how many people currently live with you? 0 Lives alone -1 Refuse -10 Lives in.. |
+  |      f2f2b1   jail   Is first person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |      f2f2b2   jail   Is second person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Do.. |
+  |      f2f2b3   jail   Is third person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don.. |
+  |      f2f2b4   jail   Is fourth person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Do.. |
+  |      f2f2b5   jail   Is fifth person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don.. |
+  |      f2f2b6   jail   Is sixth person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |      f2f2b7   jail   Is seventh person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 D.. |
+  |      f2f2b8   jail   Is eighth person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Do.. |
+  |      f2f2b9   jail   Is ninth person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don.. |
+  |     f2f2b10   jail   Is tenth person male or female? 1 Male 2 Female -1 Refuse -10 Lives in jail/shelter/on street -2 Don.. |
+  |        f2h2   jail   What is current living situation? 1 Rent 10 Homeless 101 Mobile home 102 Military base/dorm 103 Mote.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |      f2fh22   jail   Have you ever spent time in correctional institution? 1 jail 2 No 3 house arrest -1 Refuse -2 Don't .. |
+  |      f2fh23   jail   Was any of this time spent in youth/reform school correctional facilities? 1 jail 2 No 3 house arres.. |
+  |      f2fh24   jail   Did you spend any time in adult correctional facilities? 1 jail 2 No 3 house arrest -1 Refuse -2 Don.. |
+  |  cf2finjail   jail   Constructed - father report, father in jail at his 1 yr interview                                      |
+  | cmf2finjail   jail   Constructed - mother and father reports, father in jail at either 1 yr interview                       |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  cf2fevjail   jail   Constructed - father reports, dad ever in jail by his 1yr interview                                    |
+  | cmf2fevjail   jail   Constructed - mother and father reports, dad ever in jail by either 1yr intervie                       |
+  |       f2k9b   jail   Why aren't you looking for a regular job? 1 Own bus. 101 Transportation 102 Probation/in jail 103 Pl.. |
+  |    m3c21d_7   jail   What action taken: sent father to prison or jail? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 M.. |
+  |    m3c38d_7   jail   What action taken: sent father to prison or jail? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 M.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |       m3c41   jail   Is father currently working, in school, or unemployed? 0 Nothing 1 Working 101 Disability 102 Halfwa.. |
+  |       m3c42   jail   Has father ever spent any time in jail or prison? 1 Yes 2 No 3 In jail -1 Refuse -2 Don't know -3 Mi.. |
+  |    m3c42a_1   jail   Why is/was father in jail: assault? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5.. |
+  |    m3c42a_2   jail   Why is/was father in jail: robbery or theft? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multip.. |
+  |    m3c42a_3   jail   Why is/was father in jail: possession/use/sale of drugs? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missi.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |    m3c42a_4   jail   Why is/was father in jail: major traffic offense? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 M.. |
+  |    m3c42a_5   jail   Why is/was father in jail: non-payment of child support? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missi.. |
+  |    m3c42a_6   jail   Why is/was father in jail: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  |    m3c42a_7   jail   18C ONLY Why is/was father in jail: simple assault? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4.. |
+  |    m3c42a_8   jail   Why is/was father in jail: other? 1 Yes 101 Weapons 102 Minor 103 Domestic 2 No -1 Refuse -2 Don't k.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |     m3c42c1   jail   Approximately how long was father in jail? years  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans.. |
+  |     m3c42c2   jail   Approximately how long was father in jail? months  -1 Refuse -2 Don't know -3 Missing -4 Multiple an.. |
+  |     m3c42c3   jail   Approximately how long was father in jail? weeks  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans.. |
+  |     m3c42c4   jail   Approximately how long was father in jail? days  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans .. |
+  |     m3c42d2   jail   When did father go to jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not a.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |     m3c42e2   jail   When will father be released from jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |  cm3finjail   jail   Constructed - mother report, father in jail at her 3yr interview                                       |
+  |  cm3fevjail   jail   Constructed - mother report, father has spent time in jail by her 3yr interview                        |
+  |        m3e7   jail   What was CP doing most of last week? 0 Nothing 1 Working at regular job 2 Looking for work 3 In scho.. |
+  |       m3e25   jail   Has CP spent any time in jail or prison? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple a.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |        m3k7   jail   Why aren't you looking for a regular job? 1 Own business 101 Transportation 102 Back to school 103 P.. |
+  |    f3c15a_4   jail   Why agreement changed: other? 1 Yes 101 Back together 102 Arrears 103 Terminated 104 Father jail 105.. |
+  |       f3c42   jail   Has mother ever spent any time in jail? 1 Yes 2 No 3 In jail -1 Refuse -2 Don't know -3 Missing -4 M.. |
+  |    f3c42a_1   jail   Why mother in jail: assault? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not as.. |
+  |    f3c42a_2   jail   Why mother in jail: robbery or theft? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |    f3c42a_3   jail   Why mother in jail: possession/use/sale of drugs? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 M.. |
+  |    f3c42a_4   jail   Why is/was mother in jail: major traffic offense? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 M.. |
+  |    f3c42a_5   jail   Why is/was mother in jail: non-payment of child support? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missi.. |
+  |    f3c42a_6   jail   Why is/was mother in jail: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  |    f3c42a_7   jail   18C ONLY Why mother in jail: simple assault? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multip.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |    f3c42a_8   jail   Why mother in jail: other? 1 Yes 101 Weapons 102 Minor 103 Domestic 2 No -1 Refuse -2 Don't know -3 .. |
+  |      f3c42b   jail   INT CHK: Is mother currently in jail? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans .. |
+  |     f3c42c1   jail   Approximately how long did she spend in jail? years  -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |     f3c42c2   jail   Approximately how long did she spend in jail? months  -1 Refuse -2 Don't know -3 Missing -4 Multiple.. |
+  |     f3c42c3   jail   Approximately how long did she spend in jail? weeks  -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |     f3c42c4   jail   Approximately how long did she spend in jail? days  -1 Refuse -2 Don't know -3 Missing -4 Multiple a.. |
+  |     f3c42d2   jail   When did mother go to jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not a.. |
+  |     f3c42e2   jail   When will mother be released from jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |        f3e7   jail   What was CP doing most of last week? 0 Nothing 1 Working 2 Looking 3 School 4 Unable to work 5 In ja.. |
+  |        f3f1   jail   Not including self, how many people are currently live with you?  -1 Refuse -10 R in jail -12 R shel.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  cf3finjail   jail   Constructed - father report, father in jail at his 3yr interview                                       |
+  | cmf3finjail   jail   Constructed - mother and father reports, father in jail at either 3yr interview                        |
+  |  cf3fevjail   jail   Constructed - father report, father ever in jail by his 3yr interview                                  |
+  | cmf3fevjail   jail   Constructed - mother and father reports, dad ever in jail by either 3yr intervie                       |
+  |        f3k7   jail   Why aren't you looking for a regular job? 1 Own business 10 Other 101 Transportation 102 Back to sch.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |       m4c5b   jail   What is the main reason father doesn't see child more often? 1 M doesn't want 10 Other 101 Father in.. |
+  |    m4c21d_7   jail   What action taken: sent father to jail? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple an.. |
+  |       m4c37   jail   Has father spent any time in jail in the past two years? 1 Yes 2 No 3 In jail -1 Refuse -2 Don't kno.. |
+  |    m4c37a_1   jail   What was father in jail for: aggravated assault/rape/murder 1 Yes 2 No -1 Refuse -2 Don't know -3 Mi.. |
+  |    m4c37a_2   jail   What was father in jail for: robbery/theft/larceny 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |    m4c37a_3   jail   What father in jail for: possession/use/sale marijuana/cocaine/other drugs 1 Yes 2 No -1 Refuse -2 D.. |
+  |    m4c37a_4   jail   What was father in jail for: major traffic offense 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 .. |
+  |    m4c37a_5   jail   What was father in jail for: non-payment of child support 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  |    m4c37a_6   jail   What was father in jail for: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Mis.. |
+  |    m4c37a_7   jail   What was father in jail for: simple assault 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multipl.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |    m4c37a_8   jail   What was father in jail for: other 1 Yes 101 Domestic violence 102 Weapons possession 103 Traffic ti.. |
+  |     m4c37c1   jail   How long did he spend in jail/prison? years  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 N.. |
+  |     m4c37c2   jail   How long did he spend in jail/prison? months  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 .. |
+  |     m4c37c3   jail   How long did he spend in jail/prison? weeks  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 N.. |
+  |     m4c37c4   jail   How long did he spend in jail/prison? days  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 No.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |     m4c37d2   jail   When did father go to jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not a.. |
+  |     m4c37e2   jail   When will father be released from jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |  cm4finjail   jail   Constructed - mother report, father in jail at mother five-year interview                              |
+  |  cm4fevjail   jail   Constructed - mother report, father has spent time in jail by mother five-year i                       |
+  |        m4e7   jail   What current partner doing last week-working reg job, school, or sthg else? 0 Nothing 1 Working 101 .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |       m4e25   jail   Has current partner spent any time in jail or prison? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing .. |
+  |    f4c21d_7   jail   What action taken: sent to jail? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 No.. |
+  |       f4c37   jail   Has mother spent any time in jail in last 2 yrs? 1 Yes 2 No 3 In jail -1 Refuse -2 Don't know -3 Mis.. |
+  |    f4c37a_1   jail   What is/was mother in jail for: aggravated assault? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4.. |
+  |    f4c37a_2   jail   What is/was mother in jail for: robbery/theft/larceny? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |    f4c37a_3   jail   What is/was mother in jail for: illicit drugs? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mult.. |
+  |    f4c37a_4   jail   What is/was mother in jail for: major traffic offense? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing.. |
+  |    f4c37a_5   jail   What is/was mother in jail for: child support? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mult.. |
+  |    f4c37a_6   jail   What is/was mother in jail for: parole/probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Mi.. |
+  |    f4c37a_7   jail   What is/was mother in jail for: simple assault? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mul.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |    f4c37a_8   jail   What is/was mother in jail for: other?                                                                 |
+  |     f4c37c1   jail   How long did she spend in jail? years  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not ask.. |
+  |     f4c37c2   jail   How long did she spend in jail? months  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not as.. |
+  |     f4c37c3   jail   How long did she spend in jail? weeks  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not ask.. |
+  |     f4c37c4   jail   How long did she spend in jail? days  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not aske.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |     f4c37d2   jail   When did mother go to jail? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not asked -6.. |
+  |     f4c37e2   jail   When will mother be released from jail? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 .. |
+  |        f4e7   jail   What was CP doing monthst of last week? 0 Nothing 1 Working 2 Looking 3 School 4 Unable to work 5 In.. |
+  |        f4f1   jail   Not including self, how many people are currently live with you?  -1 Refuse -10 R in jail -12 R shel.. |
+  |  cf4finjail   jail   Constructed - father report, father in jail at his five-year interview                                 |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  | cmf4finjail   jail   Constructed - mother and father reports, father in jail at either five-year inte                       |
+  |  cf4fevjail   jail   Constructed - father report, father has spent time in jail by his five-year inte                       |
+  | cmf4fevjail   jail   Constructed - mother and father reports, dad ever in jail by either five-year in                       |
+  |        f4k7   jail   Why aren't you looking for a regular job? 1 Own business 10 Other 101 Health reasons 102 Retired 2 H.. |
+  |        m5a5   jail   A5 Not including yourself and child, number of people currently living with you 0 Respondent (and ch.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |       m5b3b   jail   B3B Main reason father doesn't see child more often 1 mother doesn't want father to see child 101 fa.. |
+  |       m5b29   jail   B29 What father was doing most of last week 0 nothing 1 working at a regular job 101 working at part.. |
+  |       m5b30   jail   B30 Father has spent any time in jail 1 yes 2 no 3 father is currently in jail -1 Refuse -10 Not app.. |
+  |      m5b30c   jail   B30C How long did he spend in jail/prison?  -1 Refuse -10 Not applicable -2 Don't know -3 Missing -4.. |
+  |     m5b30c1   jail   B30C1 Unit: Time father spent in jail/prison 1 year(s) 2 month(s) 3 week(s) 4 day(s) -1 Refuse -10 N.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |     m5b30d1   jail   B30D1 Month father went to jail/prison 1 Jan 10 Oct 11 Nov 12 Dec 2 Feb 3 Mar 4 Apr 5 May 6 Jun 7 Ju.. |
+  |     m5b30d2   jail   B30D2 Year father went to jail/prison  -1 Refuse -10 Not applicable -2 Don't know -3 Missing -4 Mult.. |
+  |     m5b30e1   jail   B30E1 Month father will be released from jail/prison 1 Jan 10 Oct 11 Nov 12 Dec 2 Feb 3 Mar 4 Apr 5 .. |
+  |     m5b30e2   jail   B30E2 Year father will be released from jail/prison  -1 Refuse -10 Not applicable -2 Don't know -3 M.. |
+  |       m5d23   jail   D23 Current partner has spent time in jail/prison 1 yes 2 no -1 Refuse -10 Not applicable -2 Don't k.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |      m5f28b   jail   F28B You have ever spent time in a correctional institution 1 yes jail 2 no 3 house arrest -1 Refuse.. |
+  |    m5b17d_7   jail   B17D_7 Sent father to prison or jail 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missin.. |
+  |        f5a5   jail   A5 Not including yourself and child, number of people currently living with you 0 Respondent (and ch.. |
+  |      f5b24x   jail   B24X Mother has spent time in jail since last interview or in past 4 years 1 yes 2 no 3 mother is cu.. |
+  |      f5b28x   jail   B28X Length of time she spent in jail/prison  -1 Refuse -10 Not applicable -2 Don't know -3 Missing .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |     f5b28x1   jail   B28X1 Unit: Length of time she spent in jail/prison 1 year(s) 2 month(s) 3 week(s) 4 day(s) -1 Refus.. |
+  |     f5b29x1   jail   B29X1 Month mother went to jail/prison 1 Jan 10 Oct 11 Nov 12 Dec 2 Feb 3 Mar 4 Apr 5 May 6 Jun 7 Ju.. |
+  |     f5b29x2   jail   B29X2 Year mother went to jail/prison  -1 Refuse -10 Not applicable -2 Don't know -3 Missing -4 Mult.. |
+  |     f5b30x1   jail   B30X1 Month mother will be released from jail/prison 1 Jan 10 Oct 11 Nov 12 Dec 2 Feb 3 Mar 4 Apr 5 .. |
+  |     f5b30x2   jail   B30X2 Year mother will be released from jail/prison  -1 Refuse -10 Not applicable -2 Don't know -3 M.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |        f5d7   jail   D7 What current partner was doing most of last week 0 nothing 1 working at a regular job 2 looking f.. |
+  |       f5d23   jail   D23 Current partner spent any time in jail or prison 1 yes 2 no -1 Refuse -10 Not applicable -2 Don'.. |
+  |      f5f28b   jail   F28B You have ever spent time in a correctional institution 1 yes jail 2 no 3 house arrest -1 Refuse.. |
+  |    f5b17d_7   jail   B17D_7 Sent father to prison or jail 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missin.. |
+  |       n5a10   jail   A10 Child's mother and father live together 1 yes they live together 2 no they do not live together .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |      n5a9_2   jail   A9_2 Child not living with BioM because mother in jail 1 Yes 2 No -1 Refuse -10 Not applicable -2 Do.. |
+  |     n5a11_3   jail   A11_3 Child not living with BioF because father is in jail 1 Yes 2 No -1 Refuse -10 Not applicable -.. |
+  |  cm5finjail   jail   Constructed - mother report, father in jail at mother five-year interview 0 No 1 Yes -1 Refuse -10 N.. |
+  |  cm5fevjail   jail   Constructed - mother report, father has spent time in jail by mother nine-year i 0 No 1 Yes -1 Refus.. |
+  |  cf5finjail   jail   Constructed - father report, father in jail at his nine-year interview 0 No 1 Yes -1 Refuse -10 Not .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  | cmf5finjail   jail   Constructed - mother and father reports, father in jail at either nine-year inte 0 No 1 Yes -1 Refus.. |
+  |  cf5fevjail   jail   Constructed - father report, father has spent time in jail by his nine-year inte 0 No 1 Yes -1 Refus.. |
+  | cmf5fevjail   jail   Constructed - mother and father reports, dad ever in jail by either nine-year in 0 No 1 Yes -1 Refus.. |
+  +-----------------------------------------------------------------------------------------------------------------------------+
+
+  +--------------------------------------------------------------------------------------------------------------------------------------+
+  | varname                  v3   searchstring                                                                                           |
+  |--------------------------------------------------------------------------------------------------------------------------------------|
+  |  f2fh27   community service   Were you required to perform community service/be on probation? 1 Yes 2 No -1 Refuse -10 None -14 mo.. |
+  |   m3i0m   community service   How important is it: to volunteer time to community service? 1 Very important 2 Somewhat important 3.. |
+  |   m3i32   community service   Were you ever required to perform community service/been on probation? 1 Yes 2 No -1 Refuse -2 Don't.. |
+  |  f3i0l2   community service   How important is it: to volunteer time to community service? 1 Very important 2 Somewhat important 3.. |
+  |   f3i32   community service   Were you ever required to perform community service or on probation? 1 Yes 2 No -1 Refuse -2 Don't k.. |
+  |--------------------------------------------------------------------------------------------------------------------------------------|
+  |   m4i29   community service   Ever required to perform community service or been on probation? 1 Yes 2 No -1 Refuse -2 Don't know .. |
+  |   f4i29   community service   Ever required to perform community service or been on probation? 1 Yes 2 No -1 Refuse -2 Don't know .. |
+  |   m5f29   community service   F29 Ever required to perform community service or ever been on probation 1 yes 2 no -1 Refuse -10 No.. |
+  |   f5f29   community service   F29 Ever required to perform community service or been on probation 1 yes 2 no -1 Refuse -10 Not app.. |
+  +--------------------------------------------------------------------------------------------------------------------------------------+
+
+  +--------------------------------------------------------------------------------------------------------------------------------+
+  |   varname          v4   searchstring                                                                                           |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |  m2c36a18   probation   What was father in jail for?-Parole or probation violation 1 Yes 2 No -1 Refuse -10 None -14 mother .. |
+  |  f2h20b18   probation   What charges do you have pending ?-Parole or probation violation 1 Yes 2 No -1 Refuse -10 None -14 m.. |
+  |  f2h21d18   probation   What charges were you convicted of ?-Parole or probation violation 1 Yes 2 No -1 Refuse -10 None -14.. |
+  |    f2fh27   probation   Were you required to perform community service/be on probation? 1 Yes 2 No -1 Refuse -10 None -14 mo.. |
+  |  m3c21d_8   probation   What action taken: put father on probation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multipl.. |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |  m3c38d_8   probation   What action taken: put father on probation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multipl.. |
+  |  m3c42a_6   probation   Why is/was father in jail: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  |  m3i26b_6   probation   Charges pending: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mul.. |
+  |   m3i28_6   probation   Charges convicted: parole/probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mult.. |
+  |     m3i32   probation   Were you ever required to perform community service/been on probation? 1 Yes 2 No -1 Refuse -2 Don't.. |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |  f3c21d_8   probation   What action taken: put on probation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -.. |
+  |  f3c38c_8   probation   What action taken: put on probation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -.. |
+  |  f3c42a_6   probation   Why is/was mother in jail: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  |  f3i26b_6   probation   Charges pending: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mul.. |
+  |   f3i28_6   probation   Charges convicted: parole/probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mult.. |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |     f3i32   probation   Were you ever required to perform community service or on probation? 1 Yes 2 No -1 Refuse -2 Don't k.. |
+  |  m4c21d_8   probation   What action taken: put father on probation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multipl.. |
+  |  m4c37a_6   probation   What was father in jail for: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Mis.. |
+  |  m4i26b_6   probation   What charges do you currently have pending? parole or probation violation 1 Yes 2 No -1 Refuse -2 Do.. |
+  |   m4i28_6   probation   What charges were you convicted of? parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know.. |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |     m4i29   probation   Ever required to perform community service or been on probation? 1 Yes 2 No -1 Refuse -2 Don't know .. |
+  |  f4c21d_8   probation   What action taken: put on probation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -.. |
+  |  f4c37a_6   probation   What is/was mother in jail for: parole/probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Mi.. |
+  |  f4i26b_6   probation   What charges pending: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4.. |
+  |   f4i28_6   probation   What charges convicted: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing .. |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |     f4i29   probation   Ever required to perform community service or been on probation? 1 Yes 2 No -1 Refuse -2 Don't know .. |
+  |     m5f29   probation   F29 Ever required to perform community service or ever been on probation 1 yes 2 no -1 Refuse -10 No.. |
+  |  m5b17d_8   probation   B17D_8 Put father on probation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missing -4 M.. |
+  | m5b30a1_7   probation   B30A1_7 Parole or probation violation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missi.. |
+  | m5f26b2_7   probation   F26B2_7 Parole or probation violation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missi.. |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |  m5f28a_7   probation   F28A_7 Parole or probation violation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missin.. |
+  |     f5f29   probation   F29 Ever required to perform community service or been on probation 1 yes 2 no -1 Refuse -10 Not app.. |
+  |  f5b26x_7   probation   B26X_7 Parole or probation violation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missin.. |
+  |  f5b17d_8   probation   B17D_8 Put father on probation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missing -4 M.. |
+  | f5f26b2_7   probation   F26B2_7 Parole or probation violation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missi.. |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |  f5f28a_7   probation   F28A_7 Parole or probation violation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missin.. |
+  |      t5g3   probation   G3 Type of teaching certification you have 1 none 2 temporary/probational/provisional/emergency 3 co.. |
+  +--------------------------------------------------------------------------------------------------------------------------------+
+
+  +----------------------------------------------------------------------------------------------------------------------------+
+  |  varname       v5   searchstring                                                                                           |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  | m3c42a_6   parole   Why is/was father in jail: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  | m3i26b_6   parole   Charges pending: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mul.. |
+  |  m3i28_6   parole   Charges convicted: parole/probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mult.. |
+  | f3c42a_6   parole   Why is/was mother in jail: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  | f3i26b_6   parole   Charges pending: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mul.. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  |  f3i28_6   parole   Charges convicted: parole/probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mult.. |
+  | m4c37a_6   parole   What was father in jail for: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Mis.. |
+  | m4i26b_6   parole   What charges do you currently have pending? parole or probation violation 1 Yes 2 No -1 Refuse -2 Do.. |
+  |  m4i28_6   parole   What charges were you convicted of? parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know.. |
+  | f4c37a_6   parole   What is/was mother in jail for: parole/probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Mi.. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  | f4i26b_6   parole   What charges pending: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4.. |
+  |  f4i28_6   parole   What charges convicted: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing .. |
+  +----------------------------------------------------------------------------------------------------------------------------+
+
+  +--------------------------------------------------------------------------------------------------------------------------------+
+  |   varname          v6   searchstring                                                                                           |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |  m2c36a18   violation   What was father in jail for?-Parole or probation violation 1 Yes 2 No -1 Refuse -10 None -14 mother .. |
+  |  f2h20b18   violation   What charges do you have pending ?-Parole or probation violation 1 Yes 2 No -1 Refuse -10 None -14 m.. |
+  |  f2h21d18   violation   What charges were you convicted of ?-Parole or probation violation 1 Yes 2 No -1 Refuse -10 None -14.. |
+  |  m3c42a_6   violation   Why is/was father in jail: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  |  m3i26b_6   violation   Charges pending: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mul.. |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |     m3i27   violation   Have you ever been convicted of any charges not traffic violations? 1 Yes 2 No -1 Refuse -2 Don't kn.. |
+  |   m3i28_6   violation   Charges convicted: parole/probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mult.. |
+  |  f3c42a_6   violation   Why is/was mother in jail: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  |  f3i26b_6   violation   Charges pending: parole or probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mul.. |
+  |     f3i27   violation   Have you ever been convicted of any charges not traffic violations? 1 Yes 2 No -1 Refuse -2 Don't kn.. |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |   f3i28_6   violation   Charges convicted: parole/probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mult.. |
+  |  m4c37a_6   violation   What was father in jail for: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Mis.. |
+  |  m4i26b_6   violation   What charges do you currently have pending? parole or probation violation 1 Yes 2 No -1 Refuse -2 Do.. |
+  |   m4i28_6   violation   What charges were you convicted of? parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know.. |
+  |  f4c37a_6   violation   What is/was mother in jail for: parole/probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Mi.. |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |  f4i26b_6   violation   What charges pending: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4.. |
+  |   f4i28_6   violation   What charges convicted: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing .. |
+  | m5b30a1_7   violation   B30A1_7 Parole or probation violation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missi.. |
+  | m5f26b2_7   violation   F26B2_7 Parole or probation violation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missi.. |
+  |  m5f28a_7   violation   F28A_7 Parole or probation violation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missin.. |
+  |--------------------------------------------------------------------------------------------------------------------------------|
+  |  f5b26x_7   violation   B26X_7 Parole or probation violation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missin.. |
+  | f5f26b2_7   violation   F26B2_7 Parole or probation violation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missi.. |
+  |  f5f28a_7   violation   F28A_7 Parole or probation violation 0 no 1 yes -1 Refuse -10 Not applicable -2 Don't know -3 Missin.. |
+  +--------------------------------------------------------------------------------------------------------------------------------+
+
+  +-----------------------------------------------------------------------------------------------------------------------------+
+  |  varname        v7   searchstring                                                                                           |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |   f2fh20   charges   Do you have any charges pending against you? 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't .. |
+  |  f2fh20a   charges   How many charges do you have pending against you?  -1 Refuse -10 wdnt take job -11 >12 hours -12 Sti.. |
+  |  f2h20b1   charges   What charges do you have pending ?-Assault 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't kn.. |
+  |  f2h20b2   charges   What charges do you have pending ?-Robbery 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't kn.. |
+  |  f2h20b3   charges   What charges do you have pending ?-Theft 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't know.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  f2h20b4   charges   What charges do you have pending ?-Theft by deception 1 Yes 2 No -1 Refuse -10 None -14 mother died .. |
+  |  f2h20b5   charges   What charges do you have pending ?-Crime related to stolen property 1 Yes 2 No -1 Refuse -10 None -1.. |
+  |  f2h20b6   charges   What charges do you have pending ?-Destruction of property 1 Yes 2 No -1 Refuse -10 None -14 mother .. |
+  |  f2h20b7   charges   What charges do you have pending ?-Other property offense 1 Yes 2 No -1 Refuse -10 None -14 mother d.. |
+  |  f2h20b8   charges   What charges do you have pending ?-Gambling 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't k.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  f2h20b9   charges   What charges do you have pending ?-Commercial vice 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 .. |
+  | f2h20b10   charges   What charges do you have pending ?-Possession/use of marijuana/hashish 1 Yes 2 No -1 Refuse -10 None.. |
+  | f2h20b11   charges   What charges do you have pending ?-Sale of marijuana or hashish 1 Yes 2 No -1 Refuse -10 None -14 mo.. |
+  | f2h20b12   charges   What charges do you have pending ?-Possession of other illicit drugs 1 Yes 2 No -1 Refuse -10 None -.. |
+  | f2h20b13   charges   What charges do you have pending ?-Sale/manufacture of other illicit drugs 1 Yes 2 No -1 Refuse -10 .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  | f2h20b14   charges   What charges do you have pending ?-Major Traffic offense 1 Yes 2 No -1 Refuse -10 None -14 mother di.. |
+  | f2h20b15   charges   What charges do you have pending ?-Underage drinking/purchase of alcohol 1 Yes 2 No -1 Refuse -10 No.. |
+  | f2h20b16   charges   What charges do you have pending ?-Status offense 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 D.. |
+  | f2h20b17   charges   What charges do you have pending ?-Non payment of child support 1 Yes 2 No -1 Refuse -10 None -14 mo.. |
+  | f2h20b18   charges   What charges do you have pending ?-Parole or probation violation 1 Yes 2 No -1 Refuse -10 None -14 m.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  | f2h20b19   charges   What charges do you have pending ?-Other 1 Yes 101 Possession of weapon 102 Minor infractions 103 Ar.. |
+  |   f2fh21   charges   Have you ever been convicted of any chargesNot minor traffic? 1 Yes 2 No -1 Refuse -10 None -14 moth.. |
+  |  f2h21d1   charges   What charges were you convicted of ?-Assault 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't .. |
+  |  f2h21d2   charges   What charges were you convicted of ?-Robbery 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't .. |
+  |  f2h21d3   charges   What charges were you convicted of ?-Theft 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't kn.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  f2h21d4   charges   What charges were you convicted of ?-Theft by deception 1 Yes 2 No -1 Refuse -10 None -14 mother die.. |
+  |  f2h21d5   charges   What charges were you convicted of ?-Crime related to stolen property 1 Yes 2 No -1 Refuse -10 None .. |
+  |  f2h21d6   charges   What charges were you convicted of ?-Destruction of property 1 Yes 2 No -1 Refuse -10 None -14 mothe.. |
+  |  f2h21d7   charges   What charges were you convicted of ?-Other property offense 1 Yes 2 No -1 Refuse -10 None -14 mother.. |
+  |  f2h21d8   charges   What charges were you convicted of ?-Gambling 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  f2h21d9   charges   What charges were you convicted of ?-Commercial vice 1 Yes 2 No -1 Refuse -10 None -14 mother died -.. |
+  | f2h21d10   charges   What charges were you convicted of ?-Possession/use of marijuana/hashish 1 Yes 2 No -1 Refuse -10 No.. |
+  | f2h21d11   charges   What charges were you convicted of ?-Sale of marijuana/hashish 1 Yes 2 No -1 Refuse -10 None -14 mot.. |
+  | f2h21d12   charges   What charges were you convicted of ?-Possession of other illicit drugs 1 Yes 2 No -1 Refuse -10 None.. |
+  | f2h21d13   charges   What charges were you convicted of ?-Sale/maufacture of other illicit drugs 1 Yes 2 No -1 Refuse -10.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  | f2h21d14   charges   What charges were you convicted of ?-Major traffic offense 1 Yes 2 No -1 Refuse -10 None -14 mother .. |
+  | f2h21d15   charges   What charges were you convicted of ?-Underage drinking/purchase of alcohol 1 Yes 2 No -1 Refuse -10 .. |
+  | f2h21d16   charges   What charges were you convicted of ?-Status offense 1 Yes 2 No -1 Refuse -10 None -14 mother died -2.. |
+  | f2h21d17   charges   What charges were you convicted of ?-Non payment of child support 1 Yes 2 No -1 Refuse -10 None -14 .. |
+  | f2h21d18   charges   What charges were you convicted of ?-Parole or probation violation 1 Yes 2 No -1 Refuse -10 None -14.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  | f2h21d19   charges   What charges were you convicted of ?-Other 1 Yes 101 Possession of weapon 102 Minor infractions 103 .. |
+  |    m3i26   charges   Do you have any charges pending against you? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multip.. |
+  |   m3i26a   charges   How many charges do you have pending?  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not ask.. |
+  |    m3i27   charges   Have you ever been convicted of any charges not traffic violations? 1 Yes 2 No -1 Refuse -2 Don't kn.. |
+  |    f3i26   charges   Do you have any charges pending against you? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multip.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |   f3i26a   charges   How many charges do you have pending?  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not ask.. |
+  |    f3i27   charges   Have you ever been convicted of any charges not traffic violations? 1 Yes 2 No -1 Refuse -2 Don't kn.. |
+  |    m4i26   charges   Do you currently have any charges pending against you? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing.. |
+  |   m4i26a   charges   How many charges do you currently have pending?  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans .. |
+  | m4i26b_1   charges   What charges do you currently have pending? aggravated assault/rape/murder 1 Yes 2 No -1 Refuse -2 D.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  | m4i26b_2   charges   What charges do you currently have pending? robbery/theft/larceny 1 Yes 2 No -1 Refuse -2 Don't know.. |
+  | m4i26b_3   charges   What charges do you currently have pending? possession/use/sale drugs 1 Yes 2 No -1 Refuse -2 Don't .. |
+  | m4i26b_4   charges   What charges do you currently have pending? major traffic offense 1 Yes 2 No -1 Refuse -2 Don't know.. |
+  | m4i26b_5   charges   What charges do you currently have pending? non-payment of child support 1 Yes 2 No -1 Refuse -2 Don.. |
+  | m4i26b_6   charges   What charges do you currently have pending? parole or probation violation 1 Yes 2 No -1 Refuse -2 Do.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  | m4i26b_7   charges   What charges do you currently have pending? simple assault 1 Yes 2 No -1 Refuse -2 Don't know -3 Mis.. |
+  | m4i26b_8   charges   What charges do you currently have pending? other 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 M.. |
+  |    m4i27   charges   In the last 2 years, have you been convicted of any charges? 1 Yes 2 No -1 Refuse -2 Don't know -3 M.. |
+  |  m4i28_1   charges   What charges were you convicted of? aggravated assault/rape/murder 1 Yes 2 No -1 Refuse -2 Don't kno.. |
+  |  m4i28_2   charges   What charges were you convicted of? robbery/theft/larceny 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  m4i28_3   charges   What charges were you convicted of? possession/use/sale drugs 1 Yes 2 No -1 Refuse -2 Don't know -3 .. |
+  |  m4i28_4   charges   What charges were you convicted of? major traffic offense 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  |  m4i28_5   charges   What charges were you convicted of? non-payment of child support 1 Yes 2 No -1 Refuse -2 Don't know .. |
+  |  m4i28_6   charges   What charges were you convicted of? parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know.. |
+  |  m4i28_7   charges   What charges were you convicted of? simple assault 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  m4i28_8   charges   What charges were you convicted of? other 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |    f4i26   charges   Do you currently have any charges pending against you? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing.. |
+  |   f4i26a   charges   How many charges do you currently have pending?  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans .. |
+  | f4i26b_1   charges   What charges pending: aggravated assault/rape/murder 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -.. |
+  | f4i26b_2   charges   What charges pending: robbery/theft/larceny 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multipl.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  | f4i26b_3   charges   What charges pending: possession/use/sale marijuana/cocaine/drugs 1 Yes 2 No -1 Refuse -2 Don't know.. |
+  | f4i26b_4   charges   What charges pending: major traffic offense 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multipl.. |
+  | f4i26b_5   charges   What charges pending: non-payment of child support 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 .. |
+  | f4i26b_6   charges   What charges pending: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4.. |
+  | f4i26b_7   charges   What charges pending: simple assault 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  | f4i26b_8   charges   What charges pending: other 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not ask.. |
+  |    f4i27   charges   In the last 2 years, have you been convicted of any charges? 1 Yes 2 No -1 Refuse -2 Don't know -3 M.. |
+  |  f4i28_1   charges   What charges convicted: aggravated assault/rape/murder 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing.. |
+  |  f4i28_2   charges   What charges convicted: robbery/theft/larceny 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multi.. |
+  |  f4i28_3   charges   What charges convicted: possession/use/sale marijuana/cocaine/drugs 1 Yes 2 No -1 Refuse -2 Don't kn.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  f4i28_4   charges   What charges convicted: major traffic offense 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multi.. |
+  |  f4i28_5   charges   What charges convicted: non-payment of child support 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -.. |
+  |  f4i28_6   charges   What charges convicted: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing .. |
+  |  f4i28_7   charges   What charges convicted: simple assault 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans.. |
+  |  f4i28_8   charges   What charges convicted: other 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not a.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |    m5f26   charges   F26 You currently have charges pending against you 1 yes 2 no -1 Refuse -10 Not applicable -2 Don't .. |
+  |   m5f26a   charges   F26A Number of charges you currently have pending  -1 Refuse -10 Not applicable -2 Don't know -3 Mis.. |
+  |    m5f27   charges   F27 Convicted of any charges since last interview 1 yes 2 no -1 Refuse -10 Not applicable -2 Don't k.. |
+  |    f5f26   charges   F26 You currently have charges pending against you 1 yes 2 no -1 Refuse -10 Not applicable -2 Don't .. |
+  |   f5f26a   charges   F26A Number of charges you currently have pending  -1 Refuse -10 Not applicable -2 Don't know -3 Mis.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |    f5f27   charges   F27 Convicted of any charges since last interview 1 yes 2 no -1 Refuse -10 Not applicable -2 Don't k.. |
+  +-----------------------------------------------------------------------------------------------------------------------------+
+
+  +-----------------------------------------------------------------------------------------------------------------------------+
+  |  varname        v8   searchstring                                                                                           |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |   f2fh21   convict   Have you ever been convicted of any chargesNot minor traffic? 1 Yes 2 No -1 Refuse -10 None -14 moth.. |
+  |  f2fh21a   convict   How many times have you been convicted of something?  -1 Refuse -10 wdnt take job -11 >12 hours -12 .. |
+  |  f2fh21b   convict   How old were you the first time you were convicted? 16 16 and younger -1 -1 Refuse -2 -2 Don't know .. |
+  | f2fh21c2   convict   When was your most recent conviction?-Year  -1 Refuse -10 wdnt take job -11 >12 hours -12 Still brea.. |
+  |  f2h21d1   convict   What charges were you convicted of ?-Assault 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  f2h21d2   convict   What charges were you convicted of ?-Robbery 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't .. |
+  |  f2h21d3   convict   What charges were you convicted of ?-Theft 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't kn.. |
+  |  f2h21d4   convict   What charges were you convicted of ?-Theft by deception 1 Yes 2 No -1 Refuse -10 None -14 mother die.. |
+  |  f2h21d5   convict   What charges were you convicted of ?-Crime related to stolen property 1 Yes 2 No -1 Refuse -10 None .. |
+  |  f2h21d6   convict   What charges were you convicted of ?-Destruction of property 1 Yes 2 No -1 Refuse -10 None -14 mothe.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  f2h21d7   convict   What charges were you convicted of ?-Other property offense 1 Yes 2 No -1 Refuse -10 None -14 mother.. |
+  |  f2h21d8   convict   What charges were you convicted of ?-Gambling 1 Yes 2 No -1 Refuse -10 None -14 mother died -2 Don't.. |
+  |  f2h21d9   convict   What charges were you convicted of ?-Commercial vice 1 Yes 2 No -1 Refuse -10 None -14 mother died -.. |
+  | f2h21d10   convict   What charges were you convicted of ?-Possession/use of marijuana/hashish 1 Yes 2 No -1 Refuse -10 No.. |
+  | f2h21d11   convict   What charges were you convicted of ?-Sale of marijuana/hashish 1 Yes 2 No -1 Refuse -10 None -14 mot.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  | f2h21d12   convict   What charges were you convicted of ?-Possession of other illicit drugs 1 Yes 2 No -1 Refuse -10 None.. |
+  | f2h21d13   convict   What charges were you convicted of ?-Sale/maufacture of other illicit drugs 1 Yes 2 No -1 Refuse -10.. |
+  | f2h21d14   convict   What charges were you convicted of ?-Major traffic offense 1 Yes 2 No -1 Refuse -10 None -14 mother .. |
+  | f2h21d15   convict   What charges were you convicted of ?-Underage drinking/purchase of alcohol 1 Yes 2 No -1 Refuse -10 .. |
+  | f2h21d16   convict   What charges were you convicted of ?-Status offense 1 Yes 2 No -1 Refuse -10 None -14 mother died -2.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  | f2h21d17   convict   What charges were you convicted of ?-Non payment of child support 1 Yes 2 No -1 Refuse -10 None -14 .. |
+  | f2h21d18   convict   What charges were you convicted of ?-Parole or probation violation 1 Yes 2 No -1 Refuse -10 None -14.. |
+  | f2h21d19   convict   What charges were you convicted of ?-Other 1 Yes 101 Possession of weapon 102 Minor infractions 103 .. |
+  |    m3i27   convict   Have you ever been convicted of any charges not traffic violations? 1 Yes 2 No -1 Refuse -2 Don't kn.. |
+  |   m3i27a   convict   How many times have you been convicted of something?  -1 Refuse -2 Don't know -3 Missing -4 Multiple.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |   m3i27c   convict   Was respondent convicted only one time? 1 Once 2 More once -1 Refuse -2 Don't know -3 Missing -4 Mul.. |
+  |  m3i27d2   convict   When was your most recent conviction year?  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 No.. |
+  |  m3i28_1   convict   Charges convicted: assault? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not ask.. |
+  |  m3i28_2   convict   Charges convicted: robbery or theft? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -.. |
+  |  m3i28_3   convict   Charges convicted: possession/use/sale of drugs? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mu.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  m3i28_4   convict   Charges convicted: major traffic offense? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |  m3i28_5   convict   Charges convicted: non-payment of child support? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mu.. |
+  |  m3i28_6   convict   Charges convicted: parole/probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mult.. |
+  |  m3i28_7   convict   18C ONLY Charges convicted: simple assault? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multipl.. |
+  |  m3i28_8   convict   Charges convicted: other? 1 Yes 101 Weapons 102 Minor 103 Domestic 2 No -1 Refuse -2 Don't know -3 M.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |    f3i27   convict   Have you ever been convicted of any charges not traffic violations? 1 Yes 2 No -1 Refuse -2 Don't kn.. |
+  |   f3i27a   convict   How many times have you been convicted of something?  -1 Refuse -2 Don't know -3 Missing -4 Multiple.. |
+  |  f3i27d2   convict   When was your most recent conviction? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 No.. |
+  |  f3i28_1   convict   Charges convicted: assault? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not ask.. |
+  |  f3i28_2   convict   Charges convicted: robbery or theft? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  f3i28_3   convict   Charges convicted: possession/use/sale of drugs? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mu.. |
+  |  f3i28_4   convict   Charges convicted: major traffic offense? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |  f3i28_5   convict   Charges convicted: non-payment of child support? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mu.. |
+  |  f3i28_6   convict   Charges convicted: parole/probation violation? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Mult.. |
+  |  f3i28_7   convict   Charges convicted: simple assault? 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  f3i28_8   convict   Charges convicted: other 1 Yes 101 Weapons 102 Minor 103 Domestic 2 No -1 Refuse -2 Don't know -3 Mi.. |
+  |    m4i27   convict   In the last 2 years, have you been convicted of any charges? 1 Yes 2 No -1 Refuse -2 Don't know -3 M.. |
+  |   m4i27a   convict   How many times have you been convicted of something in the last 2 years?  -1 Refuse -2 Don't know -3.. |
+  |  m4i28_1   convict   What charges were you convicted of? aggravated assault/rape/murder 1 Yes 2 No -1 Refuse -2 Don't kno.. |
+  |  m4i28_2   convict   What charges were you convicted of? robbery/theft/larceny 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  m4i28_3   convict   What charges were you convicted of? possession/use/sale drugs 1 Yes 2 No -1 Refuse -2 Don't know -3 .. |
+  |  m4i28_4   convict   What charges were you convicted of? major traffic offense 1 Yes 2 No -1 Refuse -2 Don't know -3 Miss.. |
+  |  m4i28_5   convict   What charges were you convicted of? non-payment of child support 1 Yes 2 No -1 Refuse -2 Don't know .. |
+  |  m4i28_6   convict   What charges were you convicted of? parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know.. |
+  |  m4i28_7   convict   What charges were you convicted of? simple assault 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 .. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  m4i28_8   convict   What charges were you convicted of? other 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |    f4i27   convict   In the last 2 years, have you been convicted of any charges? 1 Yes 2 No -1 Refuse -2 Don't know -3 M.. |
+  |   f4i27a   convict   How many times have you been convicted of something in the last 2 years?  -1 Refuse -2 Don't know -3.. |
+  |  f4i28_1   convict   What charges convicted: aggravated assault/rape/murder 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing.. |
+  |  f4i28_2   convict   What charges convicted: robbery/theft/larceny 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multi.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  f4i28_3   convict   What charges convicted: possession/use/sale marijuana/cocaine/drugs 1 Yes 2 No -1 Refuse -2 Don't kn.. |
+  |  f4i28_4   convict   What charges convicted: major traffic offense 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multi.. |
+  |  f4i28_5   convict   What charges convicted: non-payment of child support 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -.. |
+  |  f4i28_6   convict   What charges convicted: parole or probation violation 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing .. |
+  |  f4i28_7   convict   What charges convicted: simple assault 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans.. |
+  |-----------------------------------------------------------------------------------------------------------------------------|
+  |  f4i28_8   convict   What charges convicted: other 1 Yes 2 No -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not a.. |
+  |   m5f27a   convict   F27A Number of times convicted of something since last interview  -1 Refuse -10 Not applicable -2 Do.. |
+  |   f5f27a   convict   F27A Number of times convicted of something since last interview  -1 Refuse -10 Not applicable -2 Do.. |
+  +-----------------------------------------------------------------------------------------------------------------------------+
+
+  +----------------------------------------------------------------------------------------------------------------------------+
+  | varname        v9   searchstring                                                                                           |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  | m2c33e2   release   When will father be released from prison?-Year  -1 Refuse -10 wdnt take job -11 >12 hours -12 Still .. |
+  | f2fh26b   release   When were you most recently released from incarceration?-Year 1985 and earlier -1 -1 Refuse -12 Stil.. |
+  | m3c42e2   release   When will father be released from jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  | m3i31d2   release   When were you released? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not asked -6 Ski.. |
+  | f3c42e2   release   When will mother be released from jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  | f3i31d2   release   When were you released? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 Not asked -6 Ski.. |
+  | m4c37e2   release   When will father be released from jail/prison? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple .. |
+  | f4c37e2   release   When will mother be released from jail? year  -1 Refuse -2 Don't know -3 Missing -4 Multiple ans -5 .. |
+  | m5b30e1   release   B30E1 Month father will be released from jail/prison 1 Jan 10 Oct 11 Nov 12 Dec 2 Feb 3 Mar 4 Apr 5 .. |
+  | m5b30e2   release   B30E2 Year father will be released from jail/prison  -1 Refuse -10 Not applicable -2 Don't know -3 M.. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  | m5f28j1   release   F28J3 Year you were released the most recent time from incarceration 1  gave date 98 still in prison.. |
+  | m5f28j2   release   F28J2 Month you were released the most recent time from incarceration 1 Jan 10 Oct 11 Nov 12 Dec 2 F.. |
+  | m5f28j3   release   F28J3 Year you were released from incarceration  -1 Refuse -10 Not applicable -2 Don't know -3 Missi.. |
+  | f5b30x1   release   B30X1 Month mother will be released from jail/prison 1 Jan 10 Oct 11 Nov 12 Dec 2 Feb 3 Mar 4 Apr 5 .. |
+  | f5b30x2   release   B30X2 Year mother will be released from jail/prison  -1 Refuse -10 Not applicable -2 Don't know -3 M.. |
+  |----------------------------------------------------------------------------------------------------------------------------|
+  | f5f28j1   release   F28J1 Date last released from incarceration 1  gave date 98 still in prison -1 Refuse -10 Not applic.. |
+  | f5f28j2   release   F28J2 Month you were released the most recent time 1 Jan 10 Oct 11 Nov 12 Dec 2 Feb 3 Mar 4 Apr 5 Ma.. |
+  | f5f28j3   release   F28J3 Year you were released the most recent time  -1 Refuse -10 Not applicable -2 Don't know -3 Mis.. |
+  +----------------------------------------------------------------------------------------------------------------------------+
+
+. log close
+      name:  <unnamed>
+       log:  /home/opr/dkoffman/FF/CHALLENGE/search_results.txt
+  log type:  text
+ closed on:  21 Jun 2017, 21:24:10
+----------------------------------------------------------------------------------------------------------------------------------------------------
